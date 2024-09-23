@@ -10,7 +10,7 @@ class Solution:
             return 0
         if len(s) == 1:
             return 1
-        l = 0
+        le = 0
         r = 0
         ans = 0
         temp = []
@@ -18,19 +18,19 @@ class Solution:
         while r < len(s):
             if s[r] in temp:
                 ans = max(ans, lnt)
-                if s[l] == s[r]:
-                    l += 1
+                if s[le] == s[r]:
+                    le += 1
                     temp.pop(0)
                     lnt -= 1
                 else:
-                    while s[l] != s[r]:
-                        l += 1
+                    while s[le] != s[r]:
+                        le += 1
                         temp.pop(0)
                         lnt -= 1
-                        if s[l] == s[r]:
+                        if s[le] == s[r]:
                             temp.pop(0)
                             lnt -= 1
-                            l += 1
+                            le += 1
                             break
 
             temp += [s[r]]

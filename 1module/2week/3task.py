@@ -1,6 +1,6 @@
 """
 leetcode.com/problem-list/string/
-url: https://leetcode.com/problems/generate-parentheses
+url: https://leetcode.com/problems/count-and-say/
 """
 
 
